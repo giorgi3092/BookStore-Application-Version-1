@@ -271,8 +271,9 @@ namespace BookStore
                 }
                 catch(OutOfMemoryException)
                 {
-                    inFile.Close();
                     LineReader.Close();
+                    inFile.Close();
+                    
                     MessageBox.Show("Your computer is out of memory. Probably, the book.txt is not correctly formatted.");
                 }
 
@@ -344,14 +345,16 @@ namespace BookStore
             }
             catch (UnauthorizedAccessException)
             {
-                outFile.Close();
                 LineWriter.Close();
+                outFile.Close();
+                
                 MessageBox.Show("It seems like you do not have access to the file or directory.");
             }
             catch (IOException)
             {
-                outFile.Close();
                 LineWriter.Close();
+                outFile.Close();
+                
                 MessageBox.Show("Unknown IO error occured.");
             }
             LineWriter.Write($"---------------------------------------------------------------------------------------------------{Environment.NewLine}");
