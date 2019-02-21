@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * Author: Giorgi Aptsiauri 
+ * Date: 2/10/2019
+ * For class: COMPE 561
+ * 
+ * Description: The purpose of this application is to create an order windows where 
+ * users can choose to add products. The app intelligently manages to only respond to
+ * correct inputs. Order details are visually shown for the user's convenience. 
+ * */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +25,7 @@ namespace BookStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new BookStoreForm());
         }
     }
 }
